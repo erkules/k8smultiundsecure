@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: juhu
+  namespace: erkan
+spec:
+  selector:
+    app: mydeployment
+  ports:
+  - port: 80

@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: quota
+  namespace: erkan
+spec:
+  hard:
+    pods: 10
+    configmaps: 5
+    services: 2
+    count/deployments.apps: 2
+    requests.cpu: 1
+    requests.memory: 1Gi
+    requests.ephemeral-storage: 200Mi
+    limits.cpu: 1
+    limits.memory: 2Gi
+    limits.ephemeral-storage: 200Mi
+    persistentvolumeclaims: 2
+
+    default.storageclass.storage.k8s.io/requests.storage: 500Gi
+---
